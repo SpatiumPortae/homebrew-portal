@@ -9,17 +9,17 @@ class Portal < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Darwin_arm64.tar.gz"
-      sha256 "3a2f11fa8dec4dfc3188375b3279306306e6d96a66a7a624f2b56498f842e72d"
+    if Hardware::CPU.intel?
+      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Darwin_x86_64.tar.gz"
+      sha256 "cbe47c10521ebecadabdc5a82a48172983c6a475c78b5fdab7bbe08fb0a24e73"
 
       def install
         bin.install "portal"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Darwin_x86_64.tar.gz"
-      sha256 "7986417c76d1c1b7b54e08fd406c3825b91090d228234963d3451f56fd7dabc9"
+    if Hardware::CPU.arm?
+      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Darwin_arm64.tar.gz"
+      sha256 "ad758e32381a518c7f741bb241be010a6191c3b8ea67da8d6c8e8a0829857232"
 
       def install
         bin.install "portal"
@@ -30,7 +30,7 @@ class Portal < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Linux_arm64.tar.gz"
-      sha256 "c2413df409839eaa199f4a05dccff7a83cb673ac9b07a16be42059c259eeb943"
+      sha256 "64361a8b409e9c465b665c5c8f8e6ee8581b3527306ba85f406ec747eda3bdda"
 
       def install
         bin.install "portal"
@@ -38,7 +38,7 @@ class Portal < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Linux_x86_64.tar.gz"
-      sha256 "7f290ffd15255a6e30c71f86abd02db708067f136e4596a42baf17e3d39cc1fa"
+      sha256 "3f193c051eb48715cbbf25b5a8faced48e9dcb3f2e498371c4359bd3d959612f"
 
       def install
         bin.install "portal"
