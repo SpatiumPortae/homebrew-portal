@@ -5,21 +5,21 @@
 class Portal < Formula
   desc "Portal is a quick and easy command-line file transfer utility from any computer to another 🖥️ 🌌 💻"
   homepage "https://github.com/ZinoKader/portal"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Darwin_x86_64.tar.gz"
-      sha256 "cbe47c10521ebecadabdc5a82a48172983c6a475c78b5fdab7bbe08fb0a24e73"
+    if Hardware::CPU.arm?
+      url "https://github.com/ZinoKader/portal/releases/download/v1.0.3/portal_1.0.3_macOS_arm64.tar.gz"
+      sha256 "adc1b67162a6fb9f23a1eada1edbf93376fb901ec9b3d2e96b487afcbec0ab4a"
 
       def install
         bin.install "portal"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Darwin_arm64.tar.gz"
-      sha256 "ad758e32381a518c7f741bb241be010a6191c3b8ea67da8d6c8e8a0829857232"
+    if Hardware::CPU.intel?
+      url "https://github.com/ZinoKader/portal/releases/download/v1.0.3/portal_1.0.3_macOS_x86_64.tar.gz"
+      sha256 "5103cb0966e6c4dddf6c5ae12b8311b5be177cf84dff546a0ff47c6b9a569ba9"
 
       def install
         bin.install "portal"
@@ -29,16 +29,16 @@ class Portal < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Linux_arm64.tar.gz"
-      sha256 "64361a8b409e9c465b665c5c8f8e6ee8581b3527306ba85f406ec747eda3bdda"
+      url "https://github.com/ZinoKader/portal/releases/download/v1.0.3/portal_1.0.3_Linux_arm64.tar.gz"
+      sha256 "40a0c0b9daf18f6e7c0fe794dfda2aef4b41cf52fa1843254cc1d34efddfc40f"
 
       def install
         bin.install "portal"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ZinoKader/portal/releases/download/v1.0.2/portal_1.0.2_Linux_x86_64.tar.gz"
-      sha256 "3f193c051eb48715cbbf25b5a8faced48e9dcb3f2e498371c4359bd3d959612f"
+      url "https://github.com/ZinoKader/portal/releases/download/v1.0.3/portal_1.0.3_Linux_x86_64.tar.gz"
+      sha256 "20a22b220efa9d9f26321ba3276856bbe82eb54c91939e7989036da5c6e694df"
 
       def install
         bin.install "portal"
