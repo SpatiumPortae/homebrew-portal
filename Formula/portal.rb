@@ -5,21 +5,21 @@
 class Portal < Formula
   desc "Portal is a quick and easy command-line file transfer utility from any computer to another 🖥️ 🌌 💻"
   homepage "https://github.com/SpatiumPortae/portal"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.0/portal_1.2.0_macOS_x86_64.tar.gz"
-      sha256 "edd7f22f99d1c022f5dcf3352c0708bbb755b06a066d262aa1c384308d29c92b"
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_macOS_x86_64.tar.gz"
+      sha256 "805a28b007aeeb13a724f064f476592ebc2f28ea57149edcb0ebdeee16799772"
 
       def install
         bin.install "portal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.0/portal_1.2.0_macOS_arm64.tar.gz"
-      sha256 "a39416a3aa07df21b54798d1eafbbf56a1f128188d30ee1eea5e7e31273972eb"
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_macOS_arm64.tar.gz"
+      sha256 "cbe2ab6de9b48974ee94bc86f17d3f3bbf362d898cca8b7415e62d9e9b89df2a"
 
       def install
         bin.install "portal"
@@ -29,16 +29,16 @@ class Portal < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.0/portal_1.2.0_Linux_arm64.tar.gz"
-      sha256 "bfd9c0224c7e023573f2db5c2b6e4a9bb22d892a718c5fc4f15f306fa1ff4b2b"
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_Linux_arm64.tar.gz"
+      sha256 "349c3599772b1627afda41737030c2b1581b3b4f7e38df5c63b4b6af02677627"
 
       def install
         bin.install "portal"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.0/portal_1.2.0_Linux_x86_64.tar.gz"
-      sha256 "16de1a385ed163158ccd1c457d9eb20f74cfa39d782c0ba3e412a9a2abc43c9e"
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_Linux_x86_64.tar.gz"
+      sha256 "41ca1a44f2b6aaa6533ef0714d8f4836be0b655263d9365f195b756e98fbffc5"
 
       def install
         bin.install "portal"
