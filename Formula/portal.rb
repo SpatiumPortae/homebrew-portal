@@ -5,21 +5,21 @@
 class Portal < Formula
   desc "Portal is a quick and easy command-line file transfer utility from any computer to another 🖥️ 🌌 💻"
   homepage "https://github.com/SpatiumPortae/portal"
-  version "1.2.1"
+  version "1.2.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_macOS_x86_64.tar.gz"
-      sha256 "805a28b007aeeb13a724f064f476592ebc2f28ea57149edcb0ebdeee16799772"
+    if Hardware::CPU.arm?
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.2/portal_1.2.2_macOS_arm64.tar.gz"
+      sha256 "6c651ee0c966a8f8bcd25feb5e01392e002de42dcea3523680c561644a260edb"
 
       def install
         bin.install "portal"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_macOS_arm64.tar.gz"
-      sha256 "cbe2ab6de9b48974ee94bc86f17d3f3bbf362d898cca8b7415e62d9e9b89df2a"
+    if Hardware::CPU.intel?
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.2/portal_1.2.2_macOS_x86_64.tar.gz"
+      sha256 "6b942df8701adffaf745958a427da550fbd3394c7fb25ec7437d30fafd88ae8b"
 
       def install
         bin.install "portal"
@@ -29,16 +29,16 @@ class Portal < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_Linux_arm64.tar.gz"
-      sha256 "349c3599772b1627afda41737030c2b1581b3b4f7e38df5c63b4b6af02677627"
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.2/portal_1.2.2_Linux_arm64.tar.gz"
+      sha256 "a8c080e13503a2b8bbb5f3efb1a1e409ddd821e978ef0c2fee433e8b60f56392"
 
       def install
         bin.install "portal"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.1/portal_1.2.1_Linux_x86_64.tar.gz"
-      sha256 "41ca1a44f2b6aaa6533ef0714d8f4836be0b655263d9365f195b756e98fbffc5"
+      url "https://github.com/SpatiumPortae/portal/releases/download/v1.2.2/portal_1.2.2_Linux_x86_64.tar.gz"
+      sha256 "e1adf19c09e2d428f509144071acb65d96bc64b0db449a1cd3c342b940b8c117"
 
       def install
         bin.install "portal"
